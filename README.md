@@ -5,7 +5,7 @@ Busify-Android is a mobile application developed as a part of [Busify](https://g
 
 ## UI
 
-[Demo UI](https://github.com/Adi8712/busify-android/assets/116958420/65d1e0a4-decd-4704-898d-5892af40fc8d)
+[Demo UI](https://github.com/Adi8712/busify-android/assets/116958420/9e26500d-a97d-43f0-a2b4-9d9f6b9a19d7)
 
 ## Tech Stack
 
