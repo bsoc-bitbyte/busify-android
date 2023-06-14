@@ -10,15 +10,18 @@ Busify-Android is a mobile application developed as a part of [Busify](https://g
 ## Tech Stack
 
 - Kotlin
-    - Lifecycle: Observe Fragment lifecycles and handle UI states upon the lifecycle changes.
-    - ViewModel: Manages UI-related data holder and lifecycle aware. Allows data to survive configuration changes such as screen rotations.
-    - DataBinding: Binds UI components in your layouts to data sources in your app using a declarative format rather than programmatically.
-- XML
-    - RecyclerView: Displays all the bus schedules fetched through the api call
+	- Lifecycle: Observe Fragment lifecycles and handle UI states upon the lifecycle changes.
+	- ViewModel: Caches state and persists through configuration changes. ViewModel also handles events and delegates them to other layers of the hierarchy.
+	- DataBinding: Binds UI components in your layouts to data sources in your app using a declarative format rather than programmatically.
+
 - [Dagger-Hilt](https://dagger.dev/hilt/): Handles dependency injection.
 
 - Architecture
-    - MVVM Architecture (View - DataBinding - ViewModel - Model)
+	- MVVM Architecture: Implemented using the DataBinding library released by Google. All modules are independent which improves the testability of each layer.
+		- Model: Responsible for the abstraction of the data sources, also contains the business logic.
+		- View: This layer informs the ViewModel about the user’s action.
+		- ViewModel: Exposes those data streams which are relevant to the View. Acts as a connection between the View and the business logic.
+
 
 ## Features
 
