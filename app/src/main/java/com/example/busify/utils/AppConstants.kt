@@ -1,4 +1,4 @@
 package com.example.busify.utils
 
-object AppConstantts {
+object AppConstants {
 }
