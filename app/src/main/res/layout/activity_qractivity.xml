@@ -14,106 +14,34 @@
         android:background="#FBBC05"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="BUSIFY"
+        app:titleMarginStart="25dp"
+        app:titleTextColor="#FFFFFF"
+        />
 
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:text="BUSIFY"
-        android:textColor="#FFFFFF"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:layout_marginTop = "35dp"
-        android:layout_marginStart = "25dp"
-        android:layout_marginEnd = "25dp"
-        app:cardCornerRadius = "15dp"
-        app:cardElevation="10dp"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        android:id="@+id/bus"
-        >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width = "match_parent"
-            android:layout_height = "wrap_content"
-            android:padding = "20dp"
-            >
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width = "match_parent"
-                android:layout_height = "wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/time"
-                android:gravity="center_vertical"
-                app:layout_constraintStart_toStartOf="parent"
-                >
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id = "@+id/imageView"
-                    android:layout_width = "wrap_content"
-                    android:layout_height = "wrap_content"
-                    android:src = "@drawable/bus"
-                    />
-
-                <TextView
-                    android:id = "@+id/textView"
-                    android:layout_width = "match_parent"
-                    android:layout_height = "wrap_content"
-                    android:hint = "MP3809"
-                    android:textSize = "40sp"
-                    android:textAlignment="center"
-                    />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width = "match_parent"
-                android:layout_height = "wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/time"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
-                >
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id = "@+id/imageView2"
-                    android:layout_width = "wrap_content"
-                    android:layout_height = "wrap_content"
-                    android:src = "@drawable/time"
-                    />
-
-                <TextView
-                    android:id = "@+id/textView2"
-                    android:layout_width = "match_parent"
-                    android:layout_height = "wrap_content"
-                    android:hint = "3:30PM"
-                    android:textSize = "40sp"
-                    android:textAlignment="center"
-                    />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.recyclerview.widget.RecyclerView
+    <include
+        android:id="@+id/bus_details_cv"
+        layout="@layout/home_items"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/bus"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/verified_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="50dp"
-        >
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bus_details_cv">
 
     </androidx.recyclerview.widget.RecyclerView>
 
