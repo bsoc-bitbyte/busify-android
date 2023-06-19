@@ -61,11 +61,13 @@
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:thumb="@drawable/unverified"
-            app:track="@drawable/verified"
+            android:checked = "false"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            android:theme="@style/Switch"
+            app:track="@drawable/track"
+            android:thumb="@drawable/thumb"
             />
 
 
