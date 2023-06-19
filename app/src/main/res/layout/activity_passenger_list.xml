@@ -17,20 +17,17 @@
         android:background="#FBBC05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tb"
+            android:text="BUSIFY"
+            android:layout_marginStart="25dp"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
     </androidx.appcompat.widget.Toolbar>
-    <TextView
-        android:id="@+id/tv_passengerlist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:text="BUSIFY"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tb_passengerlist"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/search_passengerlist"
