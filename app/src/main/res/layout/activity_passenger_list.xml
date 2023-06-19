@@ -5,5 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.passenger.PassengerListActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_passengerlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/white"
+        app:titleMarginStart="25dp"
+        app:title="BUSIFY"
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#FBBC05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_passengerlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tb_passengerlist"
+        app:cardCornerRadius="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        >
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryBackground="@color/white"
+                android:queryHint="Search"
+                android:iconifiedByDefault="false"
+                />
+
+    </androidx.cardview.widget.CardView>
+    <include
+        android:id="@+id/layout_passengerlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_items"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/search_passengerlist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+     />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_passengers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_passengerlist"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
