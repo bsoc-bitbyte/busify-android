@@ -11,22 +11,13 @@
         android:layout_height="wrap_content"
         app:titleTextColor="@color/white"
         app:titleMarginStart="25dp"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        app:title="BUSIFY"
+        app:titleTextAppearance="@style/toolbarTitle"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="#FBBC05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tb"
-            android:text="BUSIFY"
-            android:layout_marginStart="25dp"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            />
+
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.cardview.widget.CardView
