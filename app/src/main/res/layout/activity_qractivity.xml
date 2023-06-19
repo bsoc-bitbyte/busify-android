@@ -7,6 +7,8 @@
     android:background="#F6F6F6"
     tools:context=".ui.QR.QRActivity">
 
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -16,9 +18,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="BUSIFY"
+        app:titleMargin="0dp"
         app:titleMarginStart="25dp"
-        app:titleTextColor="#FFFFFF"
-        />
+        app:titleTextAppearance="@style/toolbarTitle"
+        app:titleTextColor="#FFFFFF" />
 
     <include
         android:id="@+id/bus_details_cv"
@@ -36,9 +39,7 @@
         android:id="@+id/verified_list_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="25dp"
+        android:layout_margin="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bus_details_cv">
@@ -47,3 +48,5 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
