@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/toggle_passenger"
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "wrap_content"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop = "35dp"
+    android:layout_marginStart = "25dp"
+    android:layout_marginEnd = "25dp"
+    app:cardCornerRadius = "15dp"
+    app:cardElevation="30dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:padding = "15dp"
+        >
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id = "@+id/imageView"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:src = "@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/passenger"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart="25dp"
+            android:orientation="vertical"
+            android:id="@+id/passenger"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:hint="Username"
+                android:textSize="25sp"
+                />
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:hint="Any Info"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:checked = "false"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            android:theme="@style/Switch"
+            app:track="@drawable/track"
+            android:thumb="@drawable/thumb"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
