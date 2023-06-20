@@ -1,48 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F6F6F6"
-    tools:context=".ui.QR.QRActivity">
-
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    tools:context = ".ui.QR.QRActivity"
+    >
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FBBC05"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="BUSIFY"
-        app:titleMargin="0dp"
-        app:titleMarginStart="25dp"
-        app:titleTextAppearance="@style/toolbarTitle"
-        app:titleTextColor="#FFFFFF" />
+        android:id = "@+id/toolbar"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:background = "#FBBC05"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:title = "BUSIFY"
+        app:titleMargin = "0dp"
+        app:titleMarginStart = "25dp"
+        app:titleTextAppearance = "@style/toolbarTitle"
+        app:titleTextColor = "@color/white"
+        />
 
     <include
-        android:id="@+id/bus_details_cv"
-        layout="@layout/home_items"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        android:id = "@+id/bus_qr"
+        layout = "@layout/home_items"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_margin = "25dp"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/toolbar"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/verified_list_rv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bus_details_cv">
+        android:id = "@+id/rv_qr"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "25dp"
+        android:layout_marginTop = "35dp"
+        android:layout_marginEnd = "25dp"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/bus_qr"
+        >
 
     </androidx.recyclerview.widget.RecyclerView>
 
