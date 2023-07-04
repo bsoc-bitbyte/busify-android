@@ -62,6 +62,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/verify_switch"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:checked = "false"
