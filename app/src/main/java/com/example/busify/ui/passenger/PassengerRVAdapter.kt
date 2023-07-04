@@ -1,5 +1,6 @@
 package com.example.busify.ui.passenger
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -29,9 +30,11 @@ class PassengerRVAdapter(private var passengerlist: List<PassengerRVModel>):
                 holder.username.text = model.name
                 if (model.isVerified) {
                         holder.verify.text = "Verified"
+                        holder.verify.setTextColor(Color.parseColor("#0DA72F"))
                 }
                 else {
                         holder.verify.text = "Unverified"
+                        holder.verify.setTextColor(Color.parseColor("#A70D0D"))
                 }
         }
 }
