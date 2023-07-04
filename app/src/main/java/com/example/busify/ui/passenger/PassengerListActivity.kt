@@ -21,11 +21,15 @@ class PassengerListActivity : AppCompatActivity() {
             PassengerRVModel("Passenger 4", false)
         )
 
+        setupRV()
+    }
+
+    private fun setupRV() {
         val rvadapter = PassengerRVAdapter(passengerRVData!!)
         binding.apply {
             rvPassengers.apply {
                 setHasFixedSize(true)
-                layoutManager=LinearLayoutManager(this@PassengerListActivity)
+                layoutManager = LinearLayoutManager(this@PassengerListActivity)
                 adapter = rvadapter
             }
         }

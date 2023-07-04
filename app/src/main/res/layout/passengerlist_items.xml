@@ -38,6 +38,8 @@
                 android:orientation="vertical"
                 android:id="@+id/passenger"
                 app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toStartOf="@id/verify"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 >
