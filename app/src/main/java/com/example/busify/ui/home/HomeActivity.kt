@@ -24,6 +24,7 @@ class HomeActivity : AppCompatActivity() {
          )
         setupRV()
     }
+
     private fun setupRV(){
         val rvAdapter=HomeRVAdapter(homeRVData!!)
         binding.apply {

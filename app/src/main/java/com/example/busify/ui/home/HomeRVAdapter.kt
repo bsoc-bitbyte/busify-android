@@ -30,5 +30,4 @@ class HomeRVAdapter(private var homeItems:List<HomeRVModel>):
 
     }
 
-
 }
