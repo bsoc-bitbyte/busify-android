@@ -94,7 +94,7 @@ class HomeActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             else {
-                Toast.makeText(this,"Error Found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Scanning Failed", Toast.LENGTH_SHORT).show()
             }
         }
     }
