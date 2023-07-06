@@ -2,6 +2,7 @@ package com.example.busify.ui.passenger
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.busify.databinding.ActivityPassengerListBinding
 import com.example.busify.models.PassengerRVModel
@@ -22,6 +23,9 @@ class PassengerListActivity : AppCompatActivity() {
         )
 
         setupRV()
+
+        var qrscanResult:String?=intent.getStringExtra("QRresult")
+        Toast.makeText(this, qrscanResult, Toast.LENGTH_LONG).show()
     }
 
     private fun setupRV() {
